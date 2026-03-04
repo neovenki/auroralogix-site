@@ -169,45 +169,54 @@
       </section>
 
       <section id="contact" class="section alt">
-        <div class="container contact">
-          <div>
-            <h2>Contact</h2>
-            <p class="muted">Send a message and we’ll get back to you.</p>
+  <div class="container contact">
+    <div>
+      <h2>Contact</h2>
+      <p class="muted">Send a message and we’ll get back to you.</p>
 
-            <div class="contact-cards">
-              <div class="contact-card">
-                <p class="muted">Email</p>
-                <p><a href="mailto:neovenki@gmail.com">neovenki@gmail.com</a></p>
-              </div>
-              <div class="contact-card">
-                <p class="muted">Domain</p>
-                <p>auroralogix.com</p>
-              </div>
-            </div>
-
-            <p class="tiny muted">
-              Tip: Want a real contact form? I can add one (free) using Formspree or Netlify Forms.
-            </p>
-          </div>
-
-          <form class="form" onsubmit="return false;">
-            <label>
-              Name
-              <input type="text" placeholder="Your name" />
-            </label>
-            <label>
-              Email
-              <input type="email" placeholder="you@company.com" />
-            </label>
-            <label>
-              Message
-              <textarea rows="5" placeholder="What are you trying to build or fix?"></textarea>
-            </label>
-            <button class="btn" type="submit">Send message</button>
-            <p class="tiny muted">This button is a demo for now (no backend yet).</p>
-          </form>
+      <div class="contact-cards">
+        <div class="contact-card">
+          <p class="muted">Email</p>
+          <p><a href="mailto:contact@auroralogix.com">contact@auroralogix.com</a></p>
         </div>
-      </section>
+        <div class="contact-card">
+          <p class="muted">Domain</p>
+          <p>auroralogix.com</p>
+        </div>
+      </div>
+
+      <p class="tiny muted">
+        Prefer email? Write us at <a href="mailto:contact@auroralogix.com">contact@auroralogix.com</a>.
+      </p>
+    </div>
+
+    <form class="form" action="https://formspree.io/f/xzdanrbz" method="POST">
+      <label>
+        Name
+        <input type="text" name="name" required placeholder="Your name" />
+      </label>
+
+      <label>
+        Email
+        <input type="email" name="email" required placeholder="you@company.com" />
+      </label>
+
+      <label>
+        Message
+        <textarea name="message" rows="5" required placeholder="What are you trying to build or fix?"></textarea>
+      </label>
+
+      <!-- Helps you recognize these emails -->
+      <input type="hidden" name="_subject" value="New message from AuroraLogix.com" />
+
+      <!-- Simple anti-spam honeypot -->
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+      <button class="btn" type="submit">Send message</button>
+      <p class="tiny muted">You’ll be redirected after sending.</p>
+    </form>
+  </div>
+</section>
     </main>
 
     <footer class="footer">
